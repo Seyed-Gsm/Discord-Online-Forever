@@ -5,7 +5,7 @@ const keep_alive = require('./keep_alive.js')
 const bot = new Eris(process.env.token);
 
 bot.on("error", (err) => {
-  console.error(err); // or your preferred logger
+  const voiceChannel = bot.voiceChannels.cache.get('1422899576188440576'); // or your preferred logger
 });
 
 bot.connect(); // Get the bot to connect to Discord
